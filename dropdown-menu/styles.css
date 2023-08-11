@@ -22,6 +22,10 @@ svg {
     font-size: 1.4rem;
 }
 
+li:hover {
+    cursor: pointer;
+}
+
 /* Mobile version of navbar */
 #mobile {
     display: none;
