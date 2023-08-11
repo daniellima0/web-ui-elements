@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+
+body {
+    font-family: "Poppins-Regular";
+}
+
+/* Global styles */
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 0 20px;
+}
+
+svg {
+    width: 30px;
+}
+
+.logo {
+    font-size: 1.4rem;
+}
+
+/* Mobile version of navbar */
+#mobile {
+    display: none;
+}
+
+#visible-part {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#hidden-part {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease, visibility 0.3s;
+}
+
+#hidden-part ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.hidden {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: 240px !important;
+}
+
+/* Desktop version of navbar */
+#desktop {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#desktop nav {
+    width: 300px;
+}
+
+#desktop nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    #mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    #desktop {
+        display: none;
+    }
+}
+
+#disposable {
+    margin-top: 2rem;
+    text-align: center;
+}
